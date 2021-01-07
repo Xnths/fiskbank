@@ -1,7 +1,0 @@
-C:\Users\Vaio\Desktop\Studies\C#\FiskBank\FiskBank\bin\Debug\FiskBank.exe.config
-C:\Users\Vaio\Desktop\Studies\C#\FiskBank\FiskBank\bin\Debug\FiskBank.exe
-C:\Users\Vaio\Desktop\Studies\C#\FiskBank\FiskBank\bin\Debug\FiskBank.pdb
-C:\Users\Vaio\Desktop\Studies\C#\FiskBank\FiskBank\obj\Debug\FiskBank.csprojAssemblyReference.cache
-C:\Users\Vaio\Desktop\Studies\C#\FiskBank\FiskBank\obj\Debug\FiskBank.csproj.CoreCompileInputs.cache
-C:\Users\Vaio\Desktop\Studies\C#\FiskBank\FiskBank\obj\Debug\FiskBank.exe
-C:\Users\Vaio\Desktop\Studies\C#\FiskBank\FiskBank\obj\Debug\FiskBank.pdb
