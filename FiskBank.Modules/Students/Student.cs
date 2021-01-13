@@ -7,33 +7,35 @@ using System.Threading.Tasks;
 
 namespace FiskBank.Modules.Students
 {
-    public class Student
+    public abstract class Student
     {
         public string Name { get; }
         public short Registry { get; }
         public Address Address { get; private set; }
+        internal double discount;
+        public abstract double Tuition();
         private static short _registryNumber = 1;
         //Solution to non-complex database. This Array, then, stores the registry numbers, preventing duplicates.
         private static ArrayList _studentList = new ArrayList();
 
-        public Student(string name, short registry, string streetName, string number, string neighborhood, string city, string postalCode)
+        public Student(string name, short registry, double discount, string streetName, string number, string neighborhood, string city, string postalCode)
         {
             //In case, registry number will be manually added
             ToTestDuplicateRegistry(registry, name);
 
             Name = name;
             Registry = registry;
+            this.discount = 1.0 - discount;
             Address = new Address(streetName, number, neighborhood, city, postalCode);
 
             ToRegister(registry);
         }
 
-        public Student(string name, string streetName, string number, string neighborhood, string city, string postalCode) :
-            this(name, ToCreateRegistry(), streetName, number, neighborhood, city, postalCode)
+        public Student(string name, double discount, string streetName, string number, string neighborhood, string city, string postalCode) :
+            this(name, ToCreateRegistry(), discount, streetName, number, neighborhood, city, postalCode)
         {
             //In case the registry number is meant to be automatically generated
         }
-
         private void ToTestDuplicateRegistry(short registry, string name)
         {
             for (int i = 0; i < _studentList.Count; i++)
