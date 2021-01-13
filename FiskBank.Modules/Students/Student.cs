@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FiskBank.Modules.Stuents
+namespace FiskBank.Modules.Students
 {
     public class Student
     {

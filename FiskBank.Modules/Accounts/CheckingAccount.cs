@@ -1,4 +1,4 @@
-﻿using FiskBank;
+﻿using FiskBank.Modules.Students;
 
 namespace FiskBank.Modules.Accounts
 {
