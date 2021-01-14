@@ -57,6 +57,13 @@
             <param name="student">An instance of <see cref="T:FiskBank.Modules.Students.Student"/> Class.</param>
             <param name="balance">Inicial amount to deposit at the start. It must be a positive number.</param>
         </member>
+        <member name="M:FiskBank.Modules.Accounts.SavingsAccount.GetGain(System.Int16)">
+            <summary>
+            Returns the amount of Savings income earn during the <paramref name="months"/> especified.
+            </summary>
+            <param name="months">Duration of time you want to calcule income based on current <see cref="P:FiskBank.Modules.Accounts.Account.Balance"/>.</param>
+            <returns></returns>
+        </member>
         <member name="M:FiskBank.Modules.Address.#ctor(System.String,System.String,System.String,System.String,System.String)">
             <summary>
             Instance a new Address.
@@ -66,12 +73,6 @@
             <param name="neighborhood">House neighborhood name.</param>
             <param name="city">House city.</param>
             <param name="postalCode">City's postal Code.</param>
-        </member>
-        <member name="M:FiskBank.Modules.IAccount.GetGain">
-            <summary>
-            Return income for balance in account.
-            </summary>
-            <returns></returns>
         </member>
         <member name="M:FiskBank.Modules.Staff.AuthenticableStaff.#ctor(System.String,System.String,System.String)">
             <summary>

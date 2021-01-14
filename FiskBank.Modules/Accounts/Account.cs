@@ -11,7 +11,6 @@ namespace FiskBank.Modules.Accounts
     {
         public Student Student { get; }
         private double _balance;
-        protected static double gain = 1.0;
         public static short InsufficientTranference { get; private set; }
         //The amount of Fisk Dollar at the school limits withdrawing greater values of its amount.
         protected static double fiskDollars = 0;

@@ -16,19 +16,15 @@ namespace FiskBank
         public static int operation;
         static void Main(string[] args)
         {
-            ToCreateStudent();
+            ToCreateAccount();
             Console.ReadLine();
         }
 
-        public static void ToCreateStudent()
+        public static void ToCreateAccount()
         {
-            Student student = new Kid("Lais", 0.0, "Paiol", "S/N", "Paiol Grande", "São Bento", "1249000");
             Student student1 = new Teen("João Vitor", 0.2, "Paiol", "S/N", "Paiol Grande", "São Bento", "12490000");
-            Student student2 = new Adult("Jonathas Castilho", 0.0, "Paiol", "S/N", "Paiol Grande", "São Bento", "124900000");
-
-            Console.WriteLine(student.Tuition());
-            Console.WriteLine(student1.Tuition());
-            Console.WriteLine(student2.Tuition());
+            SavingsAccount savingsAccount = new SavingsAccount(student1, 1000);
+            Console.WriteLine(savingsAccount.GetGain(12));
         }
     }
 }
