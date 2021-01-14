@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,8 +13,12 @@ namespace FiskBank.Modules.Accounts
         public Student Student { get; }
         private double _balance;
         public static short InsufficientTranference { get; private set; }
-        //The amount of Fisk Dollar at the school limits withdrawing greater values of its amount.
-        protected static double fiskDollars = 0;
+        //The amount of Fisk Dollar the school has at the current time. It limits withdrawing greater values of its amount, for lacking of bills.
+        private static double _fiskDollars = 0;
+        /// <summary>
+        /// <see cref="Account"/>'s log, which shows every action performed on system by instance referenced.
+        /// </summary>
+        public ArrayList log = new ArrayList();
 
         /// <summary>
         /// Receive <see cref="Student"/> information to create a new <see cref="Account"/>.
@@ -27,7 +32,9 @@ namespace FiskBank.Modules.Accounts
             if (balance < 0) throw new NegativeAmountException("set initial value as");
             Student = student ?? throw new NullReferenceException("The student referenced does not exist.");
             Balance = balance;
-            fiskDollars += balance;
+            _fiskDollars += balance;
+
+            log.Add(LogHelper.Log(student.Name + "'s" + nameof(Account) + " created."));
         }
 
         /// <summary>
@@ -67,6 +74,7 @@ namespace FiskBank.Modules.Accounts
             }
             Balance -= transference;
             account.ToDeposit(transference);
+            log.Add(LogHelper.Log("Tranference of F$" + transference + " to " + account.Student.Name + "account"));
         }
         /// <summary>
         /// Withdraws money.
@@ -81,7 +89,7 @@ namespace FiskBank.Modules.Accounts
             {
                 if (withdraw < 0) throw new NegativeAmountException(nameof(withdraw));
                 if (withdraw > Balance) throw new InsufficientBalanceException(withdraw, Balance);
-                if (withdraw > fiskDollars) throw new LackOfBillException(withdraw, fiskDollars);
+                if (withdraw > _fiskDollars) throw new LackOfBillException(withdraw, _fiskDollars);
             }
             catch(LackOfBillException ex)
             {
@@ -92,7 +100,8 @@ namespace FiskBank.Modules.Accounts
                 throw new InsufficientBalanceException("There was an error with the Withdraw.", ex);
             }
             Balance -= withdraw;
-            fiskDollars -= withdraw;
+            _fiskDollars -= withdraw;
+            log.Add(LogHelper.Log("Withdraw of F$" + withdraw + "."));
         }
         /// <summary>
         /// Deposit money to the account.
@@ -103,6 +112,17 @@ namespace FiskBank.Modules.Accounts
         {
             if (deposit < 0) throw new NegativeAmountException(nameof(deposit));
             Balance += deposit;
+            log.Add(LogHelper.Log("Deposit of F$" + deposit + "."));
+        }
+
+        /// <summary>
+        /// Return account's <see cref="Balance"/>.
+        /// </summary>
+        /// <returns></returns>
+        public double ToCheckAccount()
+        {
+            log.Add(nameof(Account) + " has been checked.");
+            return Balance;
         }
     }
 }

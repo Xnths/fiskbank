@@ -25,6 +25,8 @@ namespace FiskBank
             Student student1 = new Teen("João Vitor", 0.2, "Paiol", "S/N", "Paiol Grande", "São Bento", "12490000");
             SavingsAccount savingsAccount = new SavingsAccount(student1, 1000);
             Console.WriteLine(savingsAccount.GetGain(12));
+            savingsAccount.ToWithdraw(222);
+            Console.WriteLine(savingsAccount.log.Count);
         }
     }
 }

@@ -4,6 +4,11 @@
         <name>FiskBank.Modules</name>
     </assembly>
     <members>
+        <member name="F:FiskBank.Modules.Accounts.Account.log">
+            <summary>
+            <see cref="T:FiskBank.Modules.Accounts.Account"/>'s log, which shows every action performed on system by instance referenced.
+            </summary>
+        </member>
         <member name="M:FiskBank.Modules.Accounts.Account.#ctor(FiskBank.Modules.Students.Student,System.Double)">
             <summary>
             Receive <see cref="P:FiskBank.Modules.Accounts.Account.Student"/> information to create a new <see cref="T:FiskBank.Modules.Accounts.Account"/>.
@@ -43,6 +48,12 @@
             </summary>
             <exception cref="T:FiskBank.Modules.NegativeAmountException">If amount especificated is negative.</exception>
             <param name="deposit">Amount of money to be deposited</param>
+        </member>
+        <member name="M:FiskBank.Modules.Accounts.Account.ToCheckAccount">
+            <summary>
+            Return account's <see cref="P:FiskBank.Modules.Accounts.Account.Balance"/>.
+            </summary>
+            <returns></returns>
         </member>
         <member name="M:FiskBank.Modules.Accounts.CheckingAccount.#ctor(FiskBank.Modules.Students.Student)">
             <summary>
