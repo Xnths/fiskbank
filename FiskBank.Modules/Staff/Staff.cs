@@ -18,6 +18,10 @@ namespace FiskBank.Modules.Staff
             Id = id;
         }
 
+        /// <summary>
+        /// Amount of <see cref="Staff"/>'s member <see cref="Salary"/>.
+        /// </summary>
+        /// <returns></returns>
         public abstract double Salary();
     }
 }

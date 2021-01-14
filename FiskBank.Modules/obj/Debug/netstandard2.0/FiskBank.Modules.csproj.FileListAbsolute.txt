@@ -7,3 +7,4 @@ C:\Users\Vaio\Desktop\Studies\C#\FiskBank\FiskBank.Modules\obj\Debug\netstandard
 C:\Users\Vaio\Desktop\Studies\C#\FiskBank\FiskBank.Modules\obj\Debug\netstandard2.0\FiskBank.Modules.csproj.CoreCompileInputs.cache
 C:\Users\Vaio\Desktop\Studies\C#\FiskBank\FiskBank.Modules\obj\Debug\netstandard2.0\FiskBank.Modules.dll
 C:\Users\Vaio\Desktop\Studies\C#\FiskBank\FiskBank.Modules\obj\Debug\netstandard2.0\FiskBank.Modules.pdb
+C:\Users\Vaio\Desktop\Studies\C#\FiskBank\FiskBank.Modules\bin\Debug\netstandard2.0\FiskBank.Modules.xml

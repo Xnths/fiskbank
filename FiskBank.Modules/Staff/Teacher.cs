@@ -10,6 +10,11 @@ namespace FiskBank.Modules.Staff
     public class Teacher : Staff, IEducator
     {
         public ArrayList reports = new ArrayList();
+        /// <summary>
+        /// Instance a new <see cref="Teacher"/>.
+        /// </summary>
+        /// <param name="name"><see cref="Teacher"/>'s <paramref name="name"/>.</param>
+        /// <param name="id"><see cref="Teacher"/>'s governmental <paramref name="id"/>.</param>
         public Teacher(string name, string id) : base(name, id)
         {
         }
@@ -19,6 +24,10 @@ namespace FiskBank.Modules.Staff
             return minimumSalary;
         }
 
+        /// <summary>
+        /// Report class given.
+        /// </summary>
+        /// <param name="report">Text describing the activity given</param>
         public void ToReportActivity(string report)
         {
             ReportHelper.ToCreateTextReport(Name, reports, report);

@@ -13,11 +13,26 @@ namespace FiskBank.Modules.Students
         public short Registry { get; }
         public Address Address { get; private set; }
         internal double discount;
+        /// <summary>
+        /// <see cref="Student"/> Mountly tuition for classes.
+        /// </summary>
+        /// <returns></returns>
         public abstract double Tuition();
         private static short _registryNumber = 1;
         //Solution to non-complex database. This Array, then, stores the registry numbers, preventing duplicates.
         private static ArrayList _studentList = new ArrayList();
 
+        /// <summary>
+        /// Creates a new <see cref="Student"/> with manual registry number.
+        /// </summary>
+        /// <param name="name"><see cref="Student"/>'s full name.</param>
+        /// <param name="registry">Number to identify <see cref="Student"/>.</param>
+        /// <param name="discount">Discount a <see cref="Student"/> can receive. If it is meant to be none, input 1.0.</param>
+        /// <param name="streetName"><see cref="Student"/>'s house street.</param>
+        /// <param name="number"><see cref="Student"/>'s house number.</param>
+        /// <param name="neighborhood"><see cref="Student"/>'s house neighborhood name.</param>
+        /// <param name="city"><see cref="Student"/>'s house city.</param>
+        /// <param name="postalCode">City's postal Code.</param>
         public Student(string name, short registry, double discount, string streetName, string number, string neighborhood, string city, string postalCode)
         {
             //In case, registry number will be manually added
@@ -31,6 +46,16 @@ namespace FiskBank.Modules.Students
             ToRegister(registry);
         }
 
+        /// <summary>
+        /// Creates a new <see cref="Student"/> with automatic registry number.
+        /// </summary>
+        /// <param name="name"><see cref="Student"/>'s full name.</param>
+        /// <param name="discount">Discount a <see cref="Student"/> can receive. If it is meant to be none, input 1.0.</param>
+        /// <param name="streetName"><see cref="Student"/>'s house street.</param>
+        /// <param name="number"><see cref="Student"/>'s house number.</param>
+        /// <param name="neighborhood"><see cref="Student"/>'s house neighborhood name.</param>
+        /// <param name="city"><see cref="Student"/>'s house city.</param>
+        /// <param name="postalCode">City's postal Code.</param>
         public Student(string name, double discount, string streetName, string number, string neighborhood, string city, string postalCode) :
             this(name, ToCreateRegistry(), discount, streetName, number, neighborhood, city, postalCode)
         {
@@ -44,7 +69,7 @@ namespace FiskBank.Modules.Students
                     throw new DuplicateRegistryException("You tried to atribute " + name + " a registry number that already exists.");
             }
         }
-
+        
         private static void ToRegister(short registry)
         {
             _studentList.Add(registry);

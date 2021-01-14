@@ -1,0 +1,276 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FiskBank.Modules</name>
+    </assembly>
+    <members>
+        <member name="M:FiskBank.Modules.Accounts.Account.#ctor(FiskBank.Modules.Students.Student,System.Double)">
+            <summary>
+            Receive <see cref="P:FiskBank.Modules.Accounts.Account.Student"/> information to create a new <see cref="T:FiskBank.Modules.Accounts.Account"/>.
+            </summary>
+            <exception cref="T:FiskBank.Modules.NegativeAmountException">In case <see cref="P:FiskBank.Modules.Accounts.Account.Balance"/> has been set as negative number.</exception>
+            <exception cref="T:System.NullReferenceException">If <see cref="P:FiskBank.Modules.Accounts.Account.Student"/> argument is null.</exception>
+            <param name="student">An instance of <see cref="P:FiskBank.Modules.Accounts.Account.Student"/> Class.</param>
+            <param name="balance">Inicial Account's <see cref="P:FiskBank.Modules.Accounts.Account.Balance"/>.</param>
+        </member>
+        <member name="P:FiskBank.Modules.Accounts.Account.Balance">
+            <summary>
+            Account's <see cref="P:FiskBank.Modules.Accounts.Account.Balance"/>.
+            </summary>
+            <exception cref="T:FiskBank.Modules.NegativeAmountException">If it has been tried to set balance as negative number</exception>
+        </member>
+        <member name="M:FiskBank.Modules.Accounts.Account.ToTransfer(System.Double,FiskBank.Modules.Accounts.Account)">
+            <summary>
+            Tranfer an amount to another.<see cref="T:FiskBank.Modules.Accounts.Account"/>
+            </summary>
+            <exception cref="T:FiskBank.Modules.NegativeAmountException">If amount transfered was especified as negative.</exception>
+            <exception cref="T:FiskBank.Modules.InsufficientBalanceException">If amount meant to be transfered is greater than account's<see cref="P:FiskBank.Modules.Accounts.Account.Balance"/>.</exception>
+            <param name="transference">Amount of money to be transfered.</param>
+            <param name="account">Account meant transfer the amount especificated.</param>
+        </member>
+        <member name="M:FiskBank.Modules.Accounts.Account.ToWithdraw(System.Double)">
+            <summary>
+            Withdraws money.
+            </summary>
+            <exception cref="T:FiskBank.Modules.NegativeAmountException">If amount especificated is negative.</exception>
+            <exception cref="T:FiskBank.Modules.InsufficientBalanceException">If amount meant to be withdrawn is greater than account's</exception>
+            <exception cref="T:FiskBank.Modules.LackOfBillException">If there is not enough money at Fisk.</exception>
+            <param name="withdraw">The amount it is meant to be withdrawn.</param>
+        </member>
+        <member name="M:FiskBank.Modules.Accounts.Account.ToDeposit(System.Double)">
+            <summary>
+            Deposit money to the account.
+            </summary>
+            <exception cref="T:FiskBank.Modules.NegativeAmountException">If amount especificated is negative.</exception>
+            <param name="deposit">Amount of money to be deposited</param>
+        </member>
+        <member name="M:FiskBank.Modules.Accounts.CheckingAccount.#ctor(FiskBank.Modules.Students.Student)">
+            <summary>
+            Class to instance a new Checking Account
+            </summary>
+            <param name="student">An instance of <see cref="T:FiskBank.Modules.Students.Student"/> Class.</param>
+        </member>
+        <member name="M:FiskBank.Modules.Accounts.SavingsAccount.#ctor(FiskBank.Modules.Students.Student,System.Double)">
+            <summary>
+            Class to instance a new Savings Account.
+            </summary>
+            <param name="student">An instance of <see cref="T:FiskBank.Modules.Students.Student"/> Class.</param>
+            <param name="balance">Inicial amount to deposit at the start. It must be a positive number.</param>
+        </member>
+        <member name="M:FiskBank.Modules.Address.#ctor(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Instance a new Address.
+            </summary>
+            <param name="streetName">House street.</param>
+            <param name="number">House number.</param>
+            <param name="neighborhood">House neighborhood name.</param>
+            <param name="city">House city.</param>
+            <param name="postalCode">City's postal Code.</param>
+        </member>
+        <member name="M:FiskBank.Modules.IAccount.GetGain">
+            <summary>
+            Return income for balance in account.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FiskBank.Modules.Staff.AuthenticableStaff.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Instance a member in <see cref="T:FiskBank.Modules.Staff.Staff"/>, which has authentication.
+            </summary>
+            <param name="name"><see cref="T:FiskBank.Modules.Staff.Staff"/>'s member full <paramref name="name"/>.</param>
+            <param name="id"><see cref="T:FiskBank.Modules.Staff.Staff"/>'s member governmental <paramref name="id"/>.</param>
+            <param name="password"><paramref name="password"/> to acess private area.</param>
+        </member>
+        <member name="M:FiskBank.Modules.Staff.AuthenticableStaff.ToAuthenticate(System.String)">
+            <summary>
+            Compare password's attempts with correct password.
+            </summary>
+            <param name="password">Caracters to try acessing private area.</param>
+            <returns></returns>
+        </member>
+        <member name="M:FiskBank.Modules.Staff.Coordinator.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Instance a new <see cref="T:FiskBank.Modules.Staff.Coordinator"/>.
+            </summary>
+            <param name="name"><see cref="T:FiskBank.Modules.Staff.Coordinator"/>'s full <paramref name="name"/></param>
+            <param name="id"><see cref="T:FiskBank.Modules.Staff.Coordinator"/>'s governmental <paramref name="id"/></param>
+            <param name="password"><paramref name="password"/> to acess private area</param>
+        </member>
+        <member name="M:FiskBank.Modules.Staff.IT.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Instance a new IT staff member.
+            </summary>
+            <param name="name"><see cref="T:FiskBank.Modules.Staff.IT"/> professional's full <paramref name="name"/>.</param>
+            <param name="id"><see cref="T:FiskBank.Modules.Staff.IT"/> professional's governmental <paramref name="id"/>.</param>
+            <param name="password"><paramref name="password"/> to acess private area</param>
+        </member>
+        <member name="M:FiskBank.Modules.Staff.Owner.#ctor(System.String)">
+            <summary>
+            Instance a new <see cref="T:FiskBank.Modules.Staff.Owner"/>.
+            </summary>
+            <param name="password"><paramref name="password"/> to acess private area</param>
+        </member>
+        <member name="M:FiskBank.Modules.Staff.Secretary.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Instance a new <see cref="T:FiskBank.Modules.Staff.Secretary"/>.
+            </summary>
+            <param name="name"><see cref="T:FiskBank.Modules.Staff.Secretary"/>'s full <paramref name="name"/>.</param>
+            <param name="id"><see cref="T:FiskBank.Modules.Staff.Secretary"/>'s governmental <paramref name="id"/>.</param>
+            <param name="password"><paramref name="password"/> to acess private area</param>
+        </member>
+        <member name="M:FiskBank.Modules.Staff.Staff.Salary">
+            <summary>
+            Amount of <see cref="T:FiskBank.Modules.Staff.Staff"/>'s member <see cref="M:FiskBank.Modules.Staff.Staff.Salary"/>.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FiskBank.Modules.Staff.Teacher.#ctor(System.String,System.String)">
+            <summary>
+            Instance a new <see cref="T:FiskBank.Modules.Staff.Teacher"/>.
+            </summary>
+            <param name="name"><see cref="T:FiskBank.Modules.Staff.Teacher"/>'s <paramref name="name"/>.</param>
+            <param name="id"><see cref="T:FiskBank.Modules.Staff.Teacher"/>'s governmental <paramref name="id"/>.</param>
+        </member>
+        <member name="M:FiskBank.Modules.Staff.Teacher.ToReportActivity(System.String)">
+            <summary>
+            Report class given.
+            </summary>
+            <param name="report">Text describing the activity given</param>
+        </member>
+        <member name="M:FiskBank.Modules.Students.Adult.#ctor(System.String,System.Double,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Creates a new <see cref="T:FiskBank.Modules.Students.Adult"/> <see cref="T:FiskBank.Modules.Students.Student"/> with automatic registry number.
+            </summary>
+            <param name="name"><see cref="T:FiskBank.Modules.Students.Adult"/>'s full name.</param>
+            <param name="discount">Discount a <see cref="T:FiskBank.Modules.Students.Adult"/> can receive. If it is meant to be none, input 1.0.</param>
+            <param name="streetName"><see cref="T:FiskBank.Modules.Students.Adult"/>'s house street.</param>
+            <param name="number"><see cref="T:FiskBank.Modules.Students.Adult"/>'s house number.</param>
+            <param name="neighborhood"><see cref="T:FiskBank.Modules.Students.Adult"/>'s house neighborhood name.</param>
+            <param name="city"><see cref="T:FiskBank.Modules.Students.Adult"/>'s house city.</param>
+            <param name="postalCode">City's postal Code.</param>
+        </member>
+        <member name="M:FiskBank.Modules.Students.Adult.#ctor(System.String,System.Int16,System.Double,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Creates a new <see cref="T:FiskBank.Modules.Students.Adult"/><see cref="T:FiskBank.Modules.Students.Student"/> with manual registry number.
+            </summary>
+            <param name="name"><see cref="T:FiskBank.Modules.Students.Adult"/>'s full name.</param>
+            <param name="registry">Number to identify <see cref="T:FiskBank.Modules.Students.Adult"/>.</param>
+            <param name="discount">Discount a <see cref="T:FiskBank.Modules.Students.Adult"/> can receive. If it is meant to be none, input 1.0.</param>
+            <param name="streetName"><see cref="T:FiskBank.Modules.Students.Adult"/>'s house street.</param>
+            <param name="number"><see cref="T:FiskBank.Modules.Students.Adult"/>'s house number.</param>
+            <param name="neighborhood"><see cref="T:FiskBank.Modules.Students.Adult"/>'s house neighborhood name.</param>
+            <param name="city"><see cref="T:FiskBank.Modules.Students.Adult"/>'s house city.</param>
+            <param name="postalCode">City's postal Code.</param>
+        </member>
+        <member name="M:FiskBank.Modules.Students.Kid.#ctor(System.String,System.Double,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Creates a new <see cref="T:FiskBank.Modules.Students.Kid"/><see cref="T:FiskBank.Modules.Students.Student"/> with automatic registry number.
+            </summary>
+            <param name="name"><see cref="T:FiskBank.Modules.Students.Kid"/>'s full name.</param>
+            <param name="discount">Discount a <see cref="T:FiskBank.Modules.Students.Kid"/> can receive. If it is meant to be none, input 1.0.</param>
+            <param name="streetName"><see cref="T:FiskBank.Modules.Students.Kid"/>'s house street.</param>
+            <param name="number"><see cref="T:FiskBank.Modules.Students.Kid"/>'s house number.</param>
+            <param name="neighborhood"><see cref="T:FiskBank.Modules.Students.Kid"/>'s house neighborhood name.</param>
+            <param name="city"><see cref="T:FiskBank.Modules.Students.Kid"/>'s house city.</param>
+            <param name="postalCode">City's postal Code.</param>
+        </member>
+        <member name="M:FiskBank.Modules.Students.Kid.#ctor(System.String,System.Int16,System.Double,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Creates a new <see cref="T:FiskBank.Modules.Students.Kid"/><see cref="T:FiskBank.Modules.Students.Student"/> with manual registry number.
+            </summary>
+            <param name="name"><see cref="T:FiskBank.Modules.Students.Kid"/>'s full name.</param>
+            <param name="registry">Number to identify <see cref="T:FiskBank.Modules.Students.Kid"/>.</param>
+            <param name="discount">Discount a <see cref="T:FiskBank.Modules.Students.Kid"/> can receive. If it is meant to be none, input 1.0.</param>
+            <param name="streetName"><see cref="T:FiskBank.Modules.Students.Kid"/>'s house street.</param>
+            <param name="number"><see cref="T:FiskBank.Modules.Students.Kid"/>'s house number.</param>
+            <param name="neighborhood"><see cref="T:FiskBank.Modules.Students.Kid"/>'s house neighborhood name.</param>
+            <param name="city"><see cref="T:FiskBank.Modules.Students.Kid"/>'s house city.</param>
+            <param name="postalCode">City's postal Code.</param>
+        </member>
+        <member name="M:FiskBank.Modules.Students.Monitor.#ctor(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Creates a new <see cref="T:FiskBank.Modules.Students.Monitor"/><see cref="T:FiskBank.Modules.Students.Student"/> with manual registry number. It is important to point out that monitors don't have a discount, for they receive the course as payment working at Fisk.
+            </summary>
+            <param name="name"><see cref="T:FiskBank.Modules.Students.Monitor"/>'s full name.</param>
+            <param name="streetName"><see cref="T:FiskBank.Modules.Students.Monitor"/>'s house street.</param>
+            <param name="number"><see cref="T:FiskBank.Modules.Students.Monitor"/>'s house number.</param>
+            <param name="neighborhood"><see cref="T:FiskBank.Modules.Students.Monitor"/>'s house neighborhood name.</param>
+            <param name="city"><see cref="T:FiskBank.Modules.Students.Monitor"/>'s house city.</param>
+            <param name="postalCode">City's postal Code.</param>
+        </member>
+        <member name="M:FiskBank.Modules.Students.Monitor.#ctor(System.String,System.Int16,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Creates a new <see cref="T:FiskBank.Modules.Students.Monitor"/><see cref="T:FiskBank.Modules.Students.Student"/> with manual registry number. It is important to point out that monitors don't have a discount, for they receive the course as payment working at Fisk.
+            </summary>
+            <param name="name"><see cref="T:FiskBank.Modules.Students.Monitor"/>'s full name.</param>
+            <param name="registry">Number to identify <see cref="T:FiskBank.Modules.Students.Monitor"/>.</param>
+            <param name="streetName"><see cref="T:FiskBank.Modules.Students.Monitor"/>'s house street.</param>
+            <param name="number"><see cref="T:FiskBank.Modules.Students.Monitor"/>'s house number.</param>
+            <param name="neighborhood"><see cref="T:FiskBank.Modules.Students.Monitor"/>'s house neighborhood name.</param>
+            <param name="city"><see cref="T:FiskBank.Modules.Students.Monitor"/>'s house city.</param>
+            <param name="postalCode">City's postal Code.</param>
+        </member>
+        <member name="M:FiskBank.Modules.Students.Monitor.ToReportActivity(System.String)">
+            <summary>
+            Report Extra Acitivity given.
+            </summary>
+            <param name="report">Text describing what was done in the activity.</param>
+        </member>
+        <member name="M:FiskBank.Modules.Students.Student.Tuition">
+            <summary>
+            <see cref="T:FiskBank.Modules.Students.Student"/> Mountly tuition for classes.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FiskBank.Modules.Students.Student.#ctor(System.String,System.Int16,System.Double,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Creates a new <see cref="T:FiskBank.Modules.Students.Student"/> with manual registry number.
+            </summary>
+            <param name="name"><see cref="T:FiskBank.Modules.Students.Student"/>'s full name.</param>
+            <param name="registry">Number to identify <see cref="T:FiskBank.Modules.Students.Student"/>.</param>
+            <param name="discount">Discount a <see cref="T:FiskBank.Modules.Students.Student"/> can receive. If it is meant to be none, input 1.0.</param>
+            <param name="streetName"><see cref="T:FiskBank.Modules.Students.Student"/>'s house street.</param>
+            <param name="number"><see cref="T:FiskBank.Modules.Students.Student"/>'s house number.</param>
+            <param name="neighborhood"><see cref="T:FiskBank.Modules.Students.Student"/>'s house neighborhood name.</param>
+            <param name="city"><see cref="T:FiskBank.Modules.Students.Student"/>'s house city.</param>
+            <param name="postalCode">City's postal Code.</param>
+        </member>
+        <member name="M:FiskBank.Modules.Students.Student.#ctor(System.String,System.Double,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Creates a new <see cref="T:FiskBank.Modules.Students.Student"/> with automatic registry number.
+            </summary>
+            <param name="name"><see cref="T:FiskBank.Modules.Students.Student"/>'s full name.</param>
+            <param name="discount">Discount a <see cref="T:FiskBank.Modules.Students.Student"/> can receive. If it is meant to be none, input 1.0.</param>
+            <param name="streetName"><see cref="T:FiskBank.Modules.Students.Student"/>'s house street.</param>
+            <param name="number"><see cref="T:FiskBank.Modules.Students.Student"/>'s house number.</param>
+            <param name="neighborhood"><see cref="T:FiskBank.Modules.Students.Student"/>'s house neighborhood name.</param>
+            <param name="city"><see cref="T:FiskBank.Modules.Students.Student"/>'s house city.</param>
+            <param name="postalCode">City's postal Code.</param>
+        </member>
+        <member name="M:FiskBank.Modules.Students.Teen.#ctor(System.String,System.Double,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Creates a new <see cref="T:FiskBank.Modules.Students.Teen"/><see cref="T:FiskBank.Modules.Students.Student"/> with manual registry number.
+            </summary>
+            <param name="name"><see cref="T:FiskBank.Modules.Students.Teen"/>'s full name.</param>
+            <param name="discount">Discount a <see cref="T:FiskBank.Modules.Students.Teen"/> can receive. If it is meant to be none, input 1.0.</param>
+            <param name="streetName"><see cref="T:FiskBank.Modules.Students.Teen"/>'s house street.</param>
+            <param name="number"><see cref="T:FiskBank.Modules.Students.Teen"/>'s house number.</param>
+            <param name="neighborhood"><see cref="T:FiskBank.Modules.Students.Teen"/>'s house neighborhood name.</param>
+            <param name="city"><see cref="T:FiskBank.Modules.Students.Teen"/>'s house city.</param>
+            <param name="postalCode">City's postal Code.</param>
+        </member>
+        <member name="M:FiskBank.Modules.Students.Teen.#ctor(System.String,System.Int16,System.Double,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Creates a new <see cref="T:FiskBank.Modules.Students.Teen"/><see cref="T:FiskBank.Modules.Students.Student"/> with manual registry number.
+            </summary>
+            <param name="name"><see cref="T:FiskBank.Modules.Students.Teen"/>'s full name.</param>
+            <param name="registry">Number to identify <see cref="T:FiskBank.Modules.Students.Teen"/>.</param>
+            <param name="discount">Discount a <see cref="T:FiskBank.Modules.Students.Teen"/> can receive. If it is meant to be none, input 1.0.</param>
+            <param name="streetName"><see cref="T:FiskBank.Modules.Students.Teen"/>'s house street.</param>
+            <param name="number"><see cref="T:FiskBank.Modules.Students.Teen"/>'s house number.</param>
+            <param name="neighborhood"><see cref="T:FiskBank.Modules.Students.Teen"/>'s house neighborhood name.</param>
+            <param name="city"><see cref="T:FiskBank.Modules.Students.Teen"/>'s house city.</param>
+            <param name="postalCode">City's postal Code.</param>
+        </member>
+    </members>
+</doc>

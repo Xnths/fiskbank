@@ -11,6 +11,10 @@ namespace FiskBank.Modules.Staff
         private string _password;
         private AuthenticationHelper _authenticationHelper = new AuthenticationHelper();
 
+        /// <summary>
+        /// Instance a new <see cref="Owner"/>.
+        /// </summary>
+        /// <param name="password"><paramref name="password"/> to acess private area</param>
         public Owner(string password)
         {
             _password = password;

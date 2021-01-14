@@ -16,6 +16,13 @@ namespace FiskBank.Modules.Accounts
         //The amount of Fisk Dollar at the school limits withdrawing greater values of its amount.
         protected static double fiskDollars = 0;
 
+        /// <summary>
+        /// Receive <see cref="Student"/> information to create a new <see cref="Account"/>.
+        /// </summary>
+        /// <exception cref="NegativeAmountException">In case <see cref="Balance"/> has been set as negative number.</exception>
+        /// <exception cref="NullReferenceException">If <see cref="Student"/> argument is null.</exception>
+        /// <param name="student">An instance of <see cref="Student"/> Class.</param>
+        /// <param name="balance">Inicial Account's <see cref="Balance"/>.</param>
         public Account(Student student, double balance)
         {
             if (balance < 0) throw new NegativeAmountException("set initial value as");
@@ -24,6 +31,10 @@ namespace FiskBank.Modules.Accounts
             fiskDollars += balance;
         }
 
+        /// <summary>
+        /// Account's <see cref="Balance"/>.
+        /// </summary>
+        /// <exception cref="NegativeAmountException">If it has been tried to set balance as negative number</exception>
         public double Balance
         {
             get
@@ -36,6 +47,13 @@ namespace FiskBank.Modules.Accounts
                 _balance = value;
             }
         }
+        /// <summary>
+        /// Tranfer an amount to another.<see cref="Account"/>
+        /// </summary>
+        /// <exception cref="NegativeAmountException">If amount transfered was especified as negative.</exception>
+        /// <exception cref="InsufficientBalanceException">If amount meant to be transfered is greater than account's<see cref="Balance"/>.</exception>
+        /// <param name="transference">Amount of money to be transfered.</param>
+        /// <param name="account">Account meant transfer the amount especificated.</param>
         public void ToTransfer(double transference, Account account)
         {
             try
@@ -51,6 +69,13 @@ namespace FiskBank.Modules.Accounts
             Balance -= transference;
             account.ToDeposit(transference);
         }
+        /// <summary>
+        /// Withdraws money.
+        /// </summary>
+        /// <exception cref="NegativeAmountException">If amount especificated is negative.</exception>
+        /// <exception cref="InsufficientBalanceException">If amount meant to be withdrawn is greater than account's</exception>
+        /// <exception cref="LackOfBillException">If there is not enough money at Fisk.</exception>
+        /// <param name="withdraw">The amount it is meant to be withdrawn.</param>
         public void ToWithdraw(double withdraw)
         {
             try
@@ -70,7 +95,11 @@ namespace FiskBank.Modules.Accounts
             Balance -= withdraw;
             fiskDollars -= withdraw;
         }
-
+        /// <summary>
+        /// Deposit money to the account.
+        /// </summary>
+        /// <exception cref="NegativeAmountException">If amount especificated is negative.</exception>
+        /// <param name="deposit">Amount of money to be deposited</param>
         public void ToDeposit(double deposit)
         {
             if (deposit < 0) throw new NegativeAmountException(nameof(deposit));

@@ -4,4 +4,8 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>C:\Users\Vaio\Desktop\Studies\C#\FiskBank\FiskBank.Modules\FiskBank.Modules.xml</DocumentationFile>
+  </PropertyGroup>
+
 </Project>

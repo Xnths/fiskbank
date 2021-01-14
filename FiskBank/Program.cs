@@ -16,7 +16,7 @@ namespace FiskBank
         public static int operation;
         static void Main(string[] args)
         {
-            ToCreateMonitor();
+            ToCreateStudent();
             Console.ReadLine();
         }
 
@@ -30,12 +30,5 @@ namespace FiskBank
             Console.WriteLine(student1.Tuition());
             Console.WriteLine(student2.Tuition());
         }
-
-        public static void ToCreateMonitor()
-        {
-            Monitor student = new Monitor("Yasmin", "Paiol", "2", "Paiol", "SBS", "1234");
-
-        }
-
     }
 }

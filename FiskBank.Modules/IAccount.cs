@@ -8,6 +8,10 @@ namespace FiskBank.Modules
 {
     public interface IAccount
     {
+        /// <summary>
+        /// Return income for balance in account.
+        /// </summary>
+        /// <returns></returns>
         double GetGain();
     }
 }
