@@ -13,7 +13,7 @@ namespace FiskBank.Modules
         {
 
         }
-        public NegativeAmountException(string paramName) : base("You tried to " + paramName + " a negative amount.")
+        public NegativeAmountException(string paramName) : base($"You tried to {paramName} a negative amount.")
         {
             ParamName = paramName;
         }

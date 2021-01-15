@@ -9,7 +9,7 @@ namespace FiskBank.Modules
     {
         public static void ToCreateTextReport(string name, ArrayList reportList, string report)
         {
-            string reportText = name + ": " + report;
+            string reportText = $"{name}: {report}";
             reportList.Add(reportText);
         }
     }

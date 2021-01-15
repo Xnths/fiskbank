@@ -291,5 +291,11 @@
             <param name="paramName">Parameter's name to be extracted by the method.</param>
             <returns></returns>
         </member>
+        <member name="M:FiskBank.Modules.URLArgumentExtractor.GetPhoneNumber">
+            <summary>
+            Returns Phone Number, if <see cref="F:FiskBank.Modules.URLArgumentExtractor._url"/> contains a regular expression in format xxxx-xxxx
+            </summary>
+            <returns></returns>
+        </member>
     </members>
 </doc>

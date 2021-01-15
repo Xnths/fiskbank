@@ -34,7 +34,7 @@ namespace FiskBank.Modules.Accounts
             Balance = balance;
             _fiskDollars += balance;
 
-            log.Add(LogHelper.Log(student.Name + "'s" + nameof(Account) + " created."));
+            log.Add(LogHelper.Log($"{student.Name}'s {nameof(Account)} created."));
         }
 
         /// <summary>
@@ -74,7 +74,7 @@ namespace FiskBank.Modules.Accounts
             }
             Balance -= transference;
             account.ToDeposit(transference);
-            log.Add(LogHelper.Log("Tranference of F$" + transference + " to " + account.Student.Name + "account"));
+            log.Add(LogHelper.Log($"Tranference of F$ {transference} to {account.Student.Name} account"));
         }
         /// <summary>
         /// Withdraws money.
@@ -101,7 +101,7 @@ namespace FiskBank.Modules.Accounts
             }
             Balance -= withdraw;
             _fiskDollars -= withdraw;
-            log.Add(LogHelper.Log("Withdraw of F$" + withdraw + "."));
+            log.Add(LogHelper.Log($"Withdraw of F${withdraw}."));
         }
         /// <summary>
         /// Deposit money to the account.
@@ -112,7 +112,7 @@ namespace FiskBank.Modules.Accounts
         {
             if (deposit < 0) throw new NegativeAmountException(nameof(deposit));
             Balance += deposit;
-            log.Add(LogHelper.Log("Deposit of F$" + deposit + "."));
+            log.Add(LogHelper.Log($"Deposit of F${deposit}."));
         }
 
         /// <summary>
@@ -121,7 +121,7 @@ namespace FiskBank.Modules.Accounts
         /// <returns></returns>
         public double ToCheckAccount()
         {
-            log.Add(nameof(Account) + " has been checked.");
+            log.Add($"{nameof(Account)} has been checked.");
             return Balance;
         }
     }

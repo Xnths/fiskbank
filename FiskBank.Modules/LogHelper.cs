@@ -8,7 +8,7 @@ namespace FiskBank.Modules
     {
         public static string Log(string message)
         {
-            return DateHelper.DateToString(DateTime.Now) + " -> " + message;
+            return $"{DateHelper.DateToString(DateTime.Now)} -> {message}";
         }
     }
 }

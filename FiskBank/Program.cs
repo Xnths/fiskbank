@@ -16,15 +16,8 @@ namespace FiskBank
         public static int operation;
         static void Main(string[] args)
         {
-            URLArgumentExtractor url = new URLArgumentExtractor("fiskbank?fromCurrency=bit&toCurrency=fiskDollar&value=100");
-            Console.WriteLine(url.GetArgument("fromCurrency"));
-            Console.WriteLine(url.GetArgument("toCurrency"));
-            Console.WriteLine(url.GetArgument("value"));
-            Console.WriteLine(url.GetArgument("FROMcurrency"));
-            Console.WriteLine(url.GetArgument("TOcurRENCY"));
-            Console.WriteLine(url.GetArgument("value"));
-            
-
+            URLArgumentExtractor url = new URLArgumentExtractor("fiskbank?fromCurrency=bit&toCurrency=fiskDollar&value=100&1234-1234");
+            Console.WriteLine(url.GetPhoneNumber());
             Console.ReadLine();
         }
 
