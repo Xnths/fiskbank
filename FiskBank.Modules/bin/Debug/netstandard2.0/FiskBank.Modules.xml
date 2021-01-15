@@ -284,5 +284,12 @@
             <param name="city"><see cref="T:FiskBank.Modules.Students.Teen"/>'s house city.</param>
             <param name="postalCode">City's postal Code.</param>
         </member>
+        <member name="M:FiskBank.Modules.URLArgumentExtractor.GetArgument(System.String)">
+            <summary>
+            Returns argument especified on instanced object.
+            </summary>
+            <param name="paramName">Parameter's name to be extracted by the method.</param>
+            <returns></returns>
+        </member>
     </members>
 </doc>
