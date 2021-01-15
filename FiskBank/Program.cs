@@ -16,11 +16,21 @@ namespace FiskBank
         public static int operation;
         static void Main(string[] args)
         {
-            URLArgumentExtractor url = new URLArgumentExtractor("fiskbank?fromCurrency=bit&toCurrency=fiskDollar&value=100&1234-1234");
-            Console.WriteLine(url.GetPhoneNumber());
+            ToCreateDuplicateStudents();
             Console.ReadLine();
         }
 
+        public static void ToCreateDuplicateStudents()
+        {
+            Student student1 = new Teen("João Vitor", 0.2, "Paiol", "S/N", "Paiol Grande", "São Bento", "12490000");
+            Student student2 = new Teen("João Vitor", 1, 0.2, "Paiol", "S/N", "Paiol Grande", "São Bento", "12490000");
+            Student student3 = new Teen("João Vitor", 1, 0.2, "Paiol", "S/N", "Paiol Grande", "São Bento", "12490000");
+        }
+        public static void ToFetchForCellphoneNumber()
+        {
+            URLArgumentExtractor url = new URLArgumentExtractor("fiskbank?fromCurrency=bit&toCurrency=fiskDollar&value=100&1234-1234");
+            Console.WriteLine(url.GetPhoneNumber());
+        }
         public static void ToCreateAccount()
         {
             Student student1 = new Teen("João Vitor", 0.2, "Paiol", "S/N", "Paiol Grande", "São Bento", "12490000");

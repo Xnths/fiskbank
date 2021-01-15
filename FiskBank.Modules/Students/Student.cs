@@ -61,12 +61,19 @@ namespace FiskBank.Modules.Students
         {
             //In case the registry number is meant to be automatically generated
         }
+
+        public override bool Equals(object obj)
+        {
+            Student student = obj as Student;
+            if (obj == null) throw new DuplicateRegistryException(Name);
+            return Registry == student.Registry;
+        }
         private void ToTestDuplicateRegistry(short registry, string name)
         {
             for (int i = 0; i < _studentList.Count; i++)
             {
                 if (_studentList[i].ToString() == Convert.ToString(registry))
-                    throw new DuplicateRegistryException("You tried to atribute " + name + " a registry number that already exists.");
+                    throw new DuplicateRegistryException(Name);
             }
         }
         

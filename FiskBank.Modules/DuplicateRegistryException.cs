@@ -8,11 +8,7 @@ namespace FiskBank.Modules
 {
     public class DuplicateRegistryException : Exception
     {
-        public DuplicateRegistryException()
-        {
-
-        }
-        public DuplicateRegistryException(string message) : base(message)
+        public DuplicateRegistryException(string name) : base($"You tried to atribute {name} a registry number that already exists.")
         {
 
         }
