@@ -4,39 +4,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FiskBank.Modules.Exceptions;
+using FiskBank.Modules.Helpers;
 using FiskBank.Modules.Students;
 
 namespace FiskBank.Modules.Accounts
 {
-    public abstract class Account
+    public abstract class Account : IComparable
     {
         public Student Student { get; }
         private double _balance;
         public static short InsufficientTranference { get; private set; }
         //The amount of Fisk Dollar the school has at the current time. It limits withdrawing greater values of its amount, for lacking of bills.
         private static double _fiskDollars = 0;
-        /// <summary>
-        /// <see cref="Account"/>'s log, which shows every action performed on system by instance referenced.
-        /// </summary>
-        public ArrayList log = new ArrayList();
-
-        /// <summary>
-        /// Receive <see cref="Student"/> information to create a new <see cref="Account"/>.
-        /// </summary>
-        /// <exception cref="NegativeAmountException">In case <see cref="Balance"/> has been set as negative number.</exception>
-        /// <exception cref="NullReferenceException">If <see cref="Student"/> argument is null.</exception>
-        /// <param name="student">An instance of <see cref="Student"/> Class.</param>
-        /// <param name="balance">Inicial Account's <see cref="Balance"/>.</param>
-        public Account(Student student, double balance)
-        {
-            if (balance < 0) throw new NegativeAmountException("set initial value as");
-            Student = student ?? throw new NullReferenceException("The student referenced does not exist.");
-            Balance = balance;
-            _fiskDollars += balance;
-
-            log.Add(LogHelper.Log(student.Name + "'s" + nameof(Account) + " created."));
-        }
-
+        public List<string> log = new List<string>();
         /// <summary>
         /// Account's <see cref="Balance"/>.
         /// </summary>
@@ -53,6 +34,32 @@ namespace FiskBank.Modules.Accounts
                 _balance = value;
             }
         }
+
+        /// <summary>
+        /// Receive <see cref="Student"/> information to create a new <see cref="Account"/>.
+        /// </summary>
+        /// <exception cref="NegativeAmountException">In case <see cref="Balance"/> has been set as negative number.</exception>
+        /// <exception cref="NullReferenceException">If <see cref="Student"/> argument is null.</exception>
+        /// <param name="student">An instance of <see cref="Student"/> Class.</param>
+        /// <param name="balance">Inicial Account's <see cref="Balance"/>.</param>
+        public Account(Student student, double balance)
+        {
+            if (balance < 0) throw new NegativeAmountException("set initial value as");
+            Student = student ?? throw new NullReferenceException("The student referenced does not exist.");
+            Balance = balance;
+            _fiskDollars += balance;
+
+            log.Add(LogHelper.Log($"{student.Name}'s {nameof(Account)} created."));
+        }
+
+        public override bool Equals(object obj)
+        {
+            //Notice that the comparison is maden between Registries because this is the school's internal identification for students. There is no reason, thereby, to create another method of comparison, for students will always be represented as an Account and there is nothing that Registry represents outside the school.
+            Account account = obj as Account;
+            if (account == null) return false;
+            return account.Student.Registry == this.Student.Registry;
+        }
+
         /// <summary>
         /// Tranfer an amount to another.<see cref="Account"/>
         /// </summary>
@@ -74,7 +81,7 @@ namespace FiskBank.Modules.Accounts
             }
             Balance -= transference;
             account.ToDeposit(transference);
-            log.Add(LogHelper.Log("Tranference of F$" + transference + " to " + account.Student.Name + "account"));
+            log.Add(LogHelper.Log($"Tranference of F$ {transference} to {account.Student.Name} account"));
         }
         /// <summary>
         /// Withdraws money.
@@ -101,7 +108,7 @@ namespace FiskBank.Modules.Accounts
             }
             Balance -= withdraw;
             _fiskDollars -= withdraw;
-            log.Add(LogHelper.Log("Withdraw of F$" + withdraw + "."));
+            log.Add(LogHelper.Log($"Withdraw of F${withdraw}."));
         }
         /// <summary>
         /// Deposit money to the account.
@@ -112,7 +119,7 @@ namespace FiskBank.Modules.Accounts
         {
             if (deposit < 0) throw new NegativeAmountException(nameof(deposit));
             Balance += deposit;
-            log.Add(LogHelper.Log("Deposit of F$" + deposit + "."));
+            log.Add(LogHelper.Log($"Deposit of F${deposit}."));
         }
 
         /// <summary>
@@ -121,8 +128,23 @@ namespace FiskBank.Modules.Accounts
         /// <returns></returns>
         public double ToCheckAccount()
         {
-            log.Add(nameof(Account) + " has been checked.");
+            log.Add($"{nameof(Account)} has been checked.");
             return Balance;
+        }
+
+        public int CompareTo(object obj)
+        {
+            var otherAccount = obj as Account;
+            
+            if(Student.Registry > otherAccount.Student.Registry)
+            {
+                return 1;
+            }
+            if(Student.Registry < otherAccount.Student.Registry)
+            {
+                return -1;
+            }
+            return 0;
         }
     }
 }

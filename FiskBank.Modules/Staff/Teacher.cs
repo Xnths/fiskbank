@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FiskBank.Modules.Helpers;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace FiskBank.Modules.Staff
 {
     public class Teacher : Staff, IEducator
     {
-        public ArrayList reports = new ArrayList();
+        public List<string> reports = new List<string>();
         /// <summary>
         /// Instance a new <see cref="Teacher"/>.
         /// </summary>

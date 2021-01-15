@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FiskBank.Modules
+namespace FiskBank.Modules.Exceptions
 {
     public class LackOfBillException : Exception
     {
@@ -18,7 +18,7 @@ namespace FiskBank.Modules
         {
 
         }
-        public LackOfBillException(double amount, double fiskDollars) : this("We only have F$" + fiskDollars + ", but you requested F$" + amount + ". We ask you sorry for the inconvinience.")
+        public LackOfBillException(double amount, double fiskDollars) : this($"We only have F$ {fiskDollars} but you requested F${ amount}. We ask you sorry for the inconvinience.")
         {
             Amount = amount;
             FiskDollars = fiskDollars;

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FiskBank.Modules
+namespace FiskBank.Modules.Exceptions
 {
     public class NegativeAmountException : Exception
     {
@@ -13,7 +13,7 @@ namespace FiskBank.Modules
         {
 
         }
-        public NegativeAmountException(string paramName) : base("You tried to " + paramName + " a negative amount.")
+        public NegativeAmountException(string paramName) : base($"You tried to {paramName} a negative amount.")
         {
             ParamName = paramName;
         }

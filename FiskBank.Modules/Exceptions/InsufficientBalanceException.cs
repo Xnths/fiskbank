@@ -1,10 +1,11 @@
-﻿using System;
+﻿using FiskBank.Modules.Accounts;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FiskBank.Modules
+namespace FiskBank.Modules.Exceptions
 {
     public class InsufficientBalanceException : FinacialOperationException
     {
@@ -14,7 +15,7 @@ namespace FiskBank.Modules
         {
 
         }
-        public InsufficientBalanceException(double amount, double balance) : this("You tried to withdraw F$" + amount + " in an account's balance of F$" + balance)
+        public InsufficientBalanceException(double amount, double balance) : this($"You tried to withdraw F${amount} in an {nameof(Account)}'s balance of F${balance}")
         {
             _amount = amount;
             _balance = balance;

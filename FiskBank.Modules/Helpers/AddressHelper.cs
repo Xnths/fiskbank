@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FiskBank.Modules
+namespace FiskBank.Modules.Helpers
 {
-    public class Address
+    public class AddressHelper
     {
         public string StreetName { get; private set; }
         public string Number { get; private set; }
@@ -22,7 +22,7 @@ namespace FiskBank.Modules
         /// <param name="neighborhood">House neighborhood name.</param>
         /// <param name="city">House city.</param>
         /// <param name="postalCode">City's postal Code.</param>
-        public Address(string streetName, string number, string neighborhood, string city, string postalCode)
+        public AddressHelper(string streetName, string number, string neighborhood, string city, string postalCode)
         {
             StreetName = streetName;
             Number = number;

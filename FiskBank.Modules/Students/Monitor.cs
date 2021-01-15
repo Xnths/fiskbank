@@ -1,4 +1,5 @@
-﻿using FiskBank.Modules.Staff;
+﻿using FiskBank.Modules.Helpers;
+using FiskBank.Modules.Staff;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ namespace FiskBank.Modules.Students
 {
     public class Monitor : Student, IEducator
     {
-        public ArrayList reports = new ArrayList();
+        public List<string> reports = new List<string>();
         /// <summary>
         /// Creates a new <see cref="Monitor"/><see cref="Student"/> with manual registry number. It is important to point out that monitors don't have a discount, for they receive the course as payment working at Fisk.
         /// </summary>

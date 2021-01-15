@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace FiskBank.Modules
+namespace FiskBank.Modules.Helpers
 {
     internal class DateHelper
     {
