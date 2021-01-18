@@ -13,31 +13,79 @@ namespace FiskBank
 {
     public class Program
     {
-        public static int operation;
         static void Main(string[] args)
         {
-            ToCreateDuplicateStudents();
+            ToCreateDuplicateAccount();
             Console.ReadLine();
         }
 
-        public static void ToCreateDuplicateStudents()
+        public static void ToCreateDuplicateAccount()
         {
-            Student student1 = new Teen("João Vitor", 0.2, "Paiol", "S/N", "Paiol Grande", "São Bento", "12490000");
-            Student student2 = new Teen("João Vitor", 1, 0.2, "Paiol", "S/N", "Paiol Grande", "São Bento", "12490000");
-            Student student3 = new Teen("João Vitor", 1, 0.2, "Paiol", "S/N", "Paiol Grande", "São Bento", "12490000");
+            Adult adult = new Adult(
+                name: "Jonathas Castilho",
+                discount: 1.0,
+                streetName: "Paiol",
+                number: "S/N",
+                neighborhood: "Paiol Grande",
+                city: "São Bento do Sapucaí",
+                postalCode: "1234");
+            Adult adult2 = new Adult(
+                name: "Julia",
+                registry: 2,
+                discount: 1.0,
+                streetName: "Paiol",
+                number: "S/N",
+                neighborhood: "Paiol Grande",
+                city: "São Bento do Sapucaí",
+                postalCode: "1234");
+            Adult adult3 = new Adult(
+                name: "Maria",
+                discount: 1.0,
+                streetName: "Paiol",
+                number: "S/N",
+                neighborhood: "Paiol Grande",
+                city: "São Bento do Sapucaí",
+                postalCode: "1234");
         }
-        public static void ToFetchForCellphoneNumber()
+
+        public static void ToAddAccount()
         {
-            URLArgumentExtractor url = new URLArgumentExtractor("fiskbank?fromCurrency=bit&toCurrency=fiskDollar&value=100&1234-1234");
-            Console.WriteLine(url.GetPhoneNumber());
-        }
-        public static void ToCreateAccount()
-        {
-            Student student1 = new Teen("João Vitor", 0.2, "Paiol", "S/N", "Paiol Grande", "São Bento", "12490000");
-            SavingsAccount savingsAccount = new SavingsAccount(student1, 1000);
-            Console.WriteLine(savingsAccount.GetGain(12));
-            savingsAccount.ToWithdraw(222);
-            Console.WriteLine(savingsAccount.log.Count);
+            Adult adult = new Adult(
+                name: "Jonathas Castilho",
+                discount: 1.0,
+                streetName: "Paiol",
+                number: "S/N",
+                neighborhood: "Paiol Grande",
+                city: "São Bento do Sapucaí",
+                postalCode: "1234");
+            Adult adult2 = new Adult(
+                name: "Julia",
+                discount: 1.0,
+                streetName: "Paiol",
+                number: "S/N",
+                neighborhood: "Paiol Grande",
+                city: "São Bento do Sapucaí",
+                postalCode: "1234");
+            Adult adult3 = new Adult(
+                name: "Maria",
+                discount: 1.0,
+                streetName: "Paiol",
+                number: "S/N",
+                neighborhood: "Paiol Grande",
+                city: "São Bento do Sapucaí",
+                postalCode: "1234");
+
+            CheckingAccount account = new CheckingAccount(adult);
+            CheckingAccount account2 = new CheckingAccount(adult2);
+            CheckingAccount account3 = new CheckingAccount(adult3);
+
+            GenericList<CheckingAccount> list = new GenericList<CheckingAccount>();
+
+            list.AddVariousItems(account, account2, account3);
+            for(int i = 0; i < list.Length; i++)
+            {
+                Console.WriteLine(list[i].Student.Name);
+            }
         }
     }
 }
