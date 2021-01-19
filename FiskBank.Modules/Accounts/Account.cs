@@ -8,7 +8,7 @@ using FiskBank.Modules.Students;
 
 namespace FiskBank.Modules.Accounts
 {
-    public abstract class Account
+    public abstract class Account : IComparable
     {
         public Student Student { get; }
         private double _balance;
@@ -128,6 +128,21 @@ namespace FiskBank.Modules.Accounts
         {
             log.AddItem($"{nameof(Account)} has been checked.");
             return Balance;
+        }
+
+        public int CompareTo(object obj)
+        {
+            var otherAccount = obj as Account;
+            
+            if(Student.Registry > otherAccount.Student.Registry)
+            {
+                return 1;
+            }
+            if(Student.Registry < otherAccount.Student.Registry)
+            {
+                return -1;
+            }
+            return 0;
         }
     }
 }
