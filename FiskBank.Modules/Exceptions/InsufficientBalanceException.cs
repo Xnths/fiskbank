@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FiskBank.Modules
+namespace FiskBank.Modules.Exceptions
 {
     public class InsufficientBalanceException : FinacialOperationException
     {

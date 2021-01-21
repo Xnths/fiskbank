@@ -1,4 +1,6 @@
-﻿using System;
+﻿using FiskBank.Modules.Exceptions;
+using FiskBank.Modules.Helpers;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +13,7 @@ namespace FiskBank.Modules.Students
     {
         public string Name { get; }
         public short Registry { get; }
-        public Address Address { get; private set; }
+        public AddressHelper Address { get; private set; }
         internal double discount;
         /// <summary>
         /// <see cref="Student"/> Mountly tuition for classes.
@@ -19,7 +21,7 @@ namespace FiskBank.Modules.Students
         /// <returns></returns>
         public abstract double Tuition();
         private static short _registryNumberCounter = 1;
-        private static GenericList<short> _registries = new GenericList<short>();
+        private static List<short> _registries = new List<short>();
 
         /// <summary>
         /// Creates a new <see cref="Student"/> with manual registry number.
@@ -41,7 +43,7 @@ namespace FiskBank.Modules.Students
             Name = name;
             Registry = registry;
             this.discount = 1.0 - discount;
-            Address = new Address(streetName, number, neighborhood, city, postalCode);
+            Address = new AddressHelper(streetName, number, neighborhood, city, postalCode);
 
             ToRegister(registry);
         }
@@ -70,7 +72,7 @@ namespace FiskBank.Modules.Students
         }
         private void ToTestDuplicateRegistry(short registry, string name)
         {
-            for (int i = 0; i < _registries.Length; i++)
+            for (int i = 0; i < _registries.Count; i++)
             {
                 if (_registries[i].ToString() == Convert.ToString(registry))
                     throw new DuplicateRegistryException(Name);
@@ -79,13 +81,13 @@ namespace FiskBank.Modules.Students
 
         private static void ToRegister(short registry)
         {
-            _registries.AddItem(registry);
+            _registries.Add(registry);
             _registryNumberCounter++;
         }
 
         private static short ToCreateRegistry()
         {
-            for (int i = 0; i < _registries.Length; i++)
+            for (int i = 0; i < _registries.Count; i++)
             {
                 if (_registries[i] == _registryNumberCounter)
                 {
