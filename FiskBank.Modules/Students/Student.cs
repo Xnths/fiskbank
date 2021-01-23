@@ -12,15 +12,16 @@ namespace FiskBank.Modules.Students
     public abstract class Student
     {
         public string Name { get; }
+        public string Password { set; private get; }
         public short Registry { get; }
         public AddressHelper Address { get; private set; }
-        internal double discount;
+        public double discount { get; }
         /// <summary>
         /// <see cref="Student"/> Mountly tuition for classes.
         /// </summary>
         /// <returns></returns>
         public abstract double Tuition();
-        private static short _registryNumberCounter = 1;
+        public static short _registryNumberCounter = 1;
         private static List<short> _registries = new List<short>();
 
         /// <summary>
@@ -34,7 +35,7 @@ namespace FiskBank.Modules.Students
         /// <param name="neighborhood"><see cref="Student"/>'s house neighborhood name.</param>
         /// <param name="city"><see cref="Student"/>'s house city.</param>
         /// <param name="postalCode">City's postal Code.</param>
-        public Student(string name, short registry, double discount, string streetName, string number, string neighborhood, string city, string postalCode)
+        public Student(string name, string password, short registry, double discount, string streetName, string number, string neighborhood, string city, string postalCode)
         {
             //In case, registry number will be manually added
             if (registry == 0) throw new ArgumentOutOfRangeException(nameof(registry));
@@ -42,6 +43,7 @@ namespace FiskBank.Modules.Students
 
             Name = name;
             Registry = registry;
+            Password = password;
             this.discount = 1.0 - discount;
             Address = new AddressHelper(streetName, number, neighborhood, city, postalCode);
 
@@ -58,8 +60,8 @@ namespace FiskBank.Modules.Students
         /// <param name="neighborhood"><see cref="Student"/>'s house neighborhood name.</param>
         /// <param name="city"><see cref="Student"/>'s house city.</param>
         /// <param name="postalCode">City's postal Code.</param>
-        public Student(string name, double discount, string streetName, string number, string neighborhood, string city, string postalCode) :
-            this(name, ToCreateRegistry(), discount, streetName, number, neighborhood, city, postalCode)
+        public Student(string name, string password, double discount, string streetName, string number, string neighborhood, string city, string postalCode) :
+            this(name, password, ToCreateRegistry(), discount, streetName, number, neighborhood, city, postalCode)
         {
             //In case the registry number is meant to be automatically generated
         }
@@ -75,7 +77,7 @@ namespace FiskBank.Modules.Students
             for (int i = 0; i < _registries.Count; i++)
             {
                 if (_registries[i].ToString() == Convert.ToString(registry))
-                    throw new DuplicateRegistryException(Name);
+                    throw new DuplicateRegistryException(name);
             }
         }
 

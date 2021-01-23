@@ -1,0 +1,10 @@
+C:\Users\Vaio\Desktop\Studies\C#\FiskBank\Interface\bin\Debug\Interface.exe.config
+C:\Users\Vaio\Desktop\Studies\C#\FiskBank\Interface\bin\Debug\Interface.exe
+C:\Users\Vaio\Desktop\Studies\C#\FiskBank\Interface\bin\Debug\Interface.pdb
+C:\Users\Vaio\Desktop\Studies\C#\FiskBank\Interface\obj\Debug\Interface.csprojAssemblyReference.cache
+C:\Users\Vaio\Desktop\Studies\C#\FiskBank\Interface\obj\Debug\Interface.Form1.resources
+C:\Users\Vaio\Desktop\Studies\C#\FiskBank\Interface\obj\Debug\Interface.Properties.Resources.resources
+C:\Users\Vaio\Desktop\Studies\C#\FiskBank\Interface\obj\Debug\Interface.csproj.GenerateResource.cache
+C:\Users\Vaio\Desktop\Studies\C#\FiskBank\Interface\obj\Debug\Interface.csproj.CoreCompileInputs.cache
+C:\Users\Vaio\Desktop\Studies\C#\FiskBank\Interface\obj\Debug\Interface.exe
+C:\Users\Vaio\Desktop\Studies\C#\FiskBank\Interface\obj\Debug\Interface.pdb

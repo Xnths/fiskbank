@@ -16,7 +16,7 @@ namespace FiskBank.Modules.Students
         /// <param name="neighborhood"><see cref="Teen"/>'s house neighborhood name.</param>
         /// <param name="city"><see cref="Teen"/>'s house city.</param>
         /// <param name="postalCode">City's postal Code.</param>
-        public Teen(string name, double discount, string streetName, string number, string neighborhood, string city, string postalCode) : base(name, discount, streetName, number, neighborhood, city, postalCode)
+        public Teen(string name, string password, double discount, string streetName, string number, string neighborhood, string city, string postalCode) : base(name, password, discount, streetName, number, neighborhood, city, postalCode)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace FiskBank.Modules.Students
         /// <param name="neighborhood"><see cref="Teen"/>'s house neighborhood name.</param>
         /// <param name="city"><see cref="Teen"/>'s house city.</param>
         /// <param name="postalCode">City's postal Code.</param>
-        public Teen(string name, short registry, double discount, string streetName, string number, string neighborhood, string city, string postalCode) : base(name, registry, discount, streetName, number, neighborhood, city, postalCode)
+        public Teen(string name, string password, short registry, double discount, string streetName, string number, string neighborhood, string city, string postalCode) : base(name, password, registry, discount, streetName, number, neighborhood, city, postalCode)
         {
         }
 

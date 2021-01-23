@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FiskBank", "FiskBank\FiskBank.csproj", "{9D0DB6A0-5180-41D5-99E2-F85C802E9D45}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FiskBank.Modules", "FiskBank.Modules\FiskBank.Modules.csproj", "{D0835582-3061-4698-A980-3A1B9AD11D0B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FiskBank.Modules", "FiskBank.Modules\FiskBank.Modules.csproj", "{D0835582-3061-4698-A980-3A1B9AD11D0B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserInterface", "Interface\UserInterface.csproj", "{78A627DD-8B26-4F14-BDC7-DA06BC86BECB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{D0835582-3061-4698-A980-3A1B9AD11D0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0835582-3061-4698-A980-3A1B9AD11D0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0835582-3061-4698-A980-3A1B9AD11D0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78A627DD-8B26-4F14-BDC7-DA06BC86BECB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78A627DD-8B26-4F14-BDC7-DA06BC86BECB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78A627DD-8B26-4F14-BDC7-DA06BC86BECB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78A627DD-8B26-4F14-BDC7-DA06BC86BECB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
