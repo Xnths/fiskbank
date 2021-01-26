@@ -63,7 +63,6 @@ namespace Interface
             // 
             // studentRegistryToolStripMenuItem
             // 
-            this.studentRegistryToolStripMenuItem.Image = global::Interface.Properties.Resources.FISK;
             this.studentRegistryToolStripMenuItem.Name = "studentRegistryToolStripMenuItem";
             this.studentRegistryToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.studentRegistryToolStripMenuItem.Text = "Student Registry";
