@@ -35,6 +35,8 @@
   <PropertyGroup>
     <StartupObject>UserInterface.Program</StartupObject>
   </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -49,17 +51,44 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frm_MainMDI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_MainMDI.Designer.cs">
+      <DependentUpon>frm_MainMDI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_PedagogicalAdministrationSystem_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm_PedagogicalAdministrationSystem_UC.Designer.cs">
+      <DependentUpon>frm_PedagogicalAdministrationSystem_UC.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_StudentRegistration.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_StudentRegistration.Designer.cs">
       <DependentUpon>frm_StudentRegistration.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_StudentRegistration_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm_StudentRegistration_UC.Designer.cs">
+      <DependentUpon>frm_StudentRegistration_UC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Helpers\FixMaskFormatHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frm_MainMDI.resx">
+      <DependentUpon>frm_MainMDI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_PedagogicalAdministrationSystem_UC.resx">
+      <DependentUpon>frm_PedagogicalAdministrationSystem_UC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_StudentRegistration.resx">
       <DependentUpon>frm_StudentRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_StudentRegistration_UC.resx">
+      <DependentUpon>frm_StudentRegistration_UC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -69,6 +98,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -88,6 +118,19 @@
       <Project>{d0835582-3061-4698-a980-3a1b9ad11d0b}</Project>
       <Name>FiskBank.Modules</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="img\FISK.png" />
+    <Content Include="img\Fundo 1080x1080 - Feed.png" />
+    <Content Include="img\Fundo 1080x1920 - Story &amp; IG TV.png" />
+    <Content Include="img\Fundo 1280x720 - Youtube.png" />
+    <Content Include="img\Fundo 500x500.png" />
+    <Content Include="img\Logo quadrada.png" />
+    <Content Include="img\Logo redonda.png" />
+    <Content Include="img\LOGO sem fundo.png" />
+    <Content Include="img\Rabisco branco.png" />
+    <Content Include="img\SBS.png" />
+    <Content Include="img\TEAM.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
