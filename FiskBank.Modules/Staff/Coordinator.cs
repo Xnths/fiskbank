@@ -8,6 +8,7 @@ namespace FiskBank.Modules.Staff
 {
     public class Coordinator : AuthenticableStaff
     {
+        internal static List<string> schoolReport = new List<string>();
         /// <summary>
         /// Instance a new <see cref="Coordinator"/>.
         /// </summary>
@@ -17,6 +18,12 @@ namespace FiskBank.Modules.Staff
         public Coordinator(string name, string id, string password) : base(name, id, password)
         {
 
+        }
+
+        public List<string> ToSeeReports()
+        {
+            //Athentication method
+            return schoolReport;
         }
 
         public override double Salary()
