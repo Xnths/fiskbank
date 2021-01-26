@@ -29,9 +29,9 @@ namespace FiskBank.Modules.Staff
         /// Report class given.
         /// </summary>
         /// <param name="report">Text describing the activity given</param>
-        public void ToReportActivity(DateTime acitivityTime, string report)
+        public void ToReportActivity(string name, DateTime acitivityTime, string report)
         {
-            ReportHelper.ToCreateTextReport(Name, acitivityTime, report, reports);
+            ReportHelper.ToCreateTextReport(name, acitivityTime, report, reports);
         }
     }
 }

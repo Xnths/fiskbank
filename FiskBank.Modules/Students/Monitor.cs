@@ -41,9 +41,9 @@ namespace FiskBank.Modules.Students
         /// Report Extra Acitivity given.
         /// </summary>
         /// <param name="report">Text describing what was done in the activity.</param>
-        public void ToReportActivity(DateTime acitivityTime, string report)
+        public void ToReportActivity(string name, DateTime acitivityTime, string report)
         {
-            ReportHelper.ToCreateTextReport(Name, acitivityTime, report, reports);
+            ReportHelper.ToCreateTextReport(name, acitivityTime, report, reports);
         }
 
         public override double Tuition()
