@@ -8,7 +8,7 @@ namespace FiskBank.Modules.Helpers
 {
     internal class ReportHelper
     {
-        public static void ToCreateTextReport(string name, string report, DateTime dateTime, List<string> reportList)
+        public static void ToCreateTextReport(string name, DateTime dateTime, string report, List<string> reportList)
         {
             string reportText = $"{name} at {dateTime}: {report}";
             reportList.Add(reportText);

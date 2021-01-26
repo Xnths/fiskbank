@@ -9,6 +9,6 @@ namespace FiskBank.Modules.Staff
 {
     internal interface IEducator
     {
-        void ToReportActivity(string report);
+        void ToReportActivity(DateTime activityTime, string report);
     }
 }
