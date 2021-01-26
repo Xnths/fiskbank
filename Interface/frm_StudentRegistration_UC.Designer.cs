@@ -74,6 +74,7 @@ namespace Interface
             this.cb_Monitor.TabIndex = 30;
             this.cb_Monitor.Text = "Monitor*";
             this.cb_Monitor.UseVisualStyleBackColor = true;
+            this.cb_Monitor.CheckedChanged += new System.EventHandler(this.cb_Monitor_CheckedChanged);
             // 
             // msk_Registry
             // 
@@ -146,6 +147,7 @@ namespace Interface
             this.cb_ManualRegistry.TabIndex = 26;
             this.cb_ManualRegistry.Text = "Manual registration";
             this.cb_ManualRegistry.UseVisualStyleBackColor = true;
+            this.cb_ManualRegistry.CheckedChanged += new System.EventHandler(this.cb_ManualRegistry_CheckedChanged);
             // 
             // lbl_Discount
             // 
@@ -268,6 +270,7 @@ namespace Interface
             this.btn_SubmitForm.TabIndex = 39;
             this.btn_SubmitForm.Text = "Submit";
             this.btn_SubmitForm.UseVisualStyleBackColor = true;
+            this.btn_SubmitForm.Click += new System.EventHandler(this.btn_SubmitForm_Click);
             // 
             // txt_Name
             // 
@@ -278,7 +281,6 @@ namespace Interface
             this.txt_Name.Name = "txt_Name";
             this.txt_Name.Size = new System.Drawing.Size(314, 21);
             this.txt_Name.TabIndex = 24;
-            this.txt_Name.Leave += new System.EventHandler(this.txt_Name_Leave);
             // 
             // lbl_name
             // 

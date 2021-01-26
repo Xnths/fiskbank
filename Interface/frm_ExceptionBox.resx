@@ -117,38 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="FISK" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\fisk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Fundo_1080x1080___Feed" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\fundo 1080x1080 - feed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Fundo_1080x1920___Story___IG_TV" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\fundo 1080x1920 - story &amp; ig tv.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Fundo_1280x720___Youtube" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\fundo 1280x720 - youtube.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Fundo_500x500" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\fundo 500x500.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Logo_quadrada" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\logo quadrada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Logo_redonda" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\logo redonda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="LOGO_sem_fundo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\logo sem fundo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Rabisco_branco" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\rabisco branco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="SBS" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\sbs.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="TEAM" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\team.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
 </root>

@@ -39,6 +39,7 @@ namespace Interface
             this.dtp_Timer = new System.Windows.Forms.DateTimePicker();
             this.lbl_Time = new System.Windows.Forms.Label();
             this.btn_Submit = new System.Windows.Forms.Button();
+            this.btn_ViewReports = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbl_PedagogicalAdministrationSystem
@@ -47,9 +48,9 @@ namespace Interface
             this.lbl_PedagogicalAdministrationSystem.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_PedagogicalAdministrationSystem.Location = new System.Drawing.Point(13, 11);
             this.lbl_PedagogicalAdministrationSystem.Name = "lbl_PedagogicalAdministrationSystem";
-            this.lbl_PedagogicalAdministrationSystem.Size = new System.Drawing.Size(45, 23);
+            this.lbl_PedagogicalAdministrationSystem.Size = new System.Drawing.Size(317, 23);
             this.lbl_PedagogicalAdministrationSystem.TabIndex = 0;
-            this.lbl_PedagogicalAdministrationSystem.Text = "PAS";
+            this.lbl_PedagogicalAdministrationSystem.Text = "Pedagogical Administration System";
             // 
             // lbl_Name
             // 
@@ -129,10 +130,20 @@ namespace Interface
             this.btn_Submit.Text = "Submit";
             this.btn_Submit.UseVisualStyleBackColor = true;
             // 
+            // btn_ViewReports
+            // 
+            this.btn_ViewReports.Location = new System.Drawing.Point(359, 11);
+            this.btn_ViewReports.Name = "btn_ViewReports";
+            this.btn_ViewReports.Size = new System.Drawing.Size(127, 23);
+            this.btn_ViewReports.TabIndex = 10;
+            this.btn_ViewReports.Text = "View Reports ";
+            this.btn_ViewReports.UseVisualStyleBackColor = true;
+            // 
             // frm_PedagogicalAdministrationSystem_UC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btn_ViewReports);
             this.Controls.Add(this.btn_Submit);
             this.Controls.Add(this.dtp_Timer);
             this.Controls.Add(this.lbl_Time);
@@ -162,5 +173,6 @@ namespace Interface
         private System.Windows.Forms.DateTimePicker dtp_Timer;
         private System.Windows.Forms.Label lbl_Time;
         private System.Windows.Forms.Button btn_Submit;
+        private System.Windows.Forms.Button btn_ViewReports;
     }
 }

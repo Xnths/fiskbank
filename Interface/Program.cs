@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Interface;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace UserInterface
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_StudentRegistration());
+            Application.Run(new frm_MainMDI());
         }
     }
 }

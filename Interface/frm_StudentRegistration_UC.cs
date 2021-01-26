@@ -80,14 +80,10 @@ namespace Interface
                 }
                 catch (DuplicateRegistryException ex)
                 {
-                    MessageBox.Show(ex.Message, "Duplicate student", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    var exceptionBox = new frm_ExceptionBox("Duplicate Registry", ex.Message, "Fisk");
+                    exceptionBox.ShowDialog();
                 }
             }
-        }
-
-        private void txt_Name_Leave(object sender, EventArgs e)
-        {
-            lbl_StudentRegistration.Text = $"{txt_Name.Text}'s Registry";
         }
     }
 }

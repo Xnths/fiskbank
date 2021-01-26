@@ -1,5 +1,4 @@
 C:\Users\Vaio\Desktop\Studies\C#\FiskBank\Interface\obj\Debug\UserInterface.csprojAssemblyReference.cache
-C:\Users\Vaio\Desktop\Studies\C#\FiskBank\Interface\obj\Debug\UserInterface.frm_StudentRegistration.resources
 C:\Users\Vaio\Desktop\Studies\C#\FiskBank\Interface\obj\Debug\Interface.Properties.Resources.resources
 C:\Users\Vaio\Desktop\Studies\C#\FiskBank\Interface\obj\Debug\UserInterface.csproj.GenerateResource.cache
 C:\Users\Vaio\Desktop\Studies\C#\FiskBank\Interface\obj\Debug\UserInterface.csproj.CoreCompileInputs.cache
@@ -11,3 +10,9 @@ C:\Users\Vaio\Desktop\Studies\C#\FiskBank\Interface\bin\Debug\Interface.pdb
 C:\Users\Vaio\Desktop\Studies\C#\FiskBank\Interface\bin\Debug\FiskBank.Modules.dll
 C:\Users\Vaio\Desktop\Studies\C#\FiskBank\Interface\bin\Debug\FiskBank.Modules.pdb
 C:\Users\Vaio\Desktop\Studies\C#\FiskBank\Interface\obj\Debug\UserInterface.csproj.CopyComplete
+C:\Users\Vaio\Desktop\Studies\C#\FiskBank\Interface\obj\Debug\Interface.frm_MainMDI.resources
+C:\Users\Vaio\Desktop\Studies\C#\FiskBank\Interface\obj\Debug\Interface.frm_PedagogicalAdministrationSystem_UC.resources
+C:\Users\Vaio\Desktop\Studies\C#\FiskBank\Interface\obj\Debug\Interface.frm_StudentRegistration_UC.resources
+C:\Users\Vaio\Desktop\Studies\C#\FiskBank\Interface\obj\Debug\Interface.frm_ATM_UC.resources
+C:\Users\Vaio\Desktop\Studies\C#\FiskBank\Interface\obj\Debug\Interface.frm_AuthenticationBox.resources
+C:\Users\Vaio\Desktop\Studies\C#\FiskBank\Interface\obj\Debug\Interface.frm_ExceptionBox.resources

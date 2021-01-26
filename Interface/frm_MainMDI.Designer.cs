@@ -36,8 +36,9 @@ namespace Interface
             this.cascadeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.horizontalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verticalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tbc_Terminal = new System.Windows.Forms.TabControl();
             this.closeFormToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tbc_Terminal = new System.Windows.Forms.TabControl();
+            this.pedagogicalAdministrationSystemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,7 +57,8 @@ namespace Interface
             // formToolStripMenuItem
             // 
             this.formToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.studentRegistryToolStripMenuItem});
+            this.studentRegistryToolStripMenuItem,
+            this.pedagogicalAdministrationSystemToolStripMenuItem});
             this.formToolStripMenuItem.Name = "formToolStripMenuItem";
             this.formToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
             this.formToolStripMenuItem.Text = "Form";
@@ -64,7 +66,7 @@ namespace Interface
             // studentRegistryToolStripMenuItem
             // 
             this.studentRegistryToolStripMenuItem.Name = "studentRegistryToolStripMenuItem";
-            this.studentRegistryToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.studentRegistryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.studentRegistryToolStripMenuItem.Text = "Student Registry";
             this.studentRegistryToolStripMenuItem.Click += new System.EventHandler(this.studentRegistryToolStripMenuItem_Click);
             // 
@@ -105,6 +107,13 @@ namespace Interface
             this.verticalToolStripMenuItem.Text = "&Vertical";
             this.verticalToolStripMenuItem.Click += new System.EventHandler(this.verticalToolStripMenuItem_Click);
             // 
+            // closeFormToolStripMenuItem
+            // 
+            this.closeFormToolStripMenuItem.Name = "closeFormToolStripMenuItem";
+            this.closeFormToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
+            this.closeFormToolStripMenuItem.Text = "Close Form";
+            this.closeFormToolStripMenuItem.Click += new System.EventHandler(this.closeFormToolStripMenuItem_Click);
+            // 
             // tbc_Terminal
             // 
             this.tbc_Terminal.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -114,12 +123,12 @@ namespace Interface
             this.tbc_Terminal.Size = new System.Drawing.Size(1264, 658);
             this.tbc_Terminal.TabIndex = 3;
             // 
-            // closeFormToolStripMenuItem
+            // pedagogicalAdministrationSystemToolStripMenuItem
             // 
-            this.closeFormToolStripMenuItem.Name = "closeFormToolStripMenuItem";
-            this.closeFormToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
-            this.closeFormToolStripMenuItem.Text = "Close Form";
-            this.closeFormToolStripMenuItem.Click += new System.EventHandler(this.closeFormToolStripMenuItem_Click);
+            this.pedagogicalAdministrationSystemToolStripMenuItem.Name = "pedagogicalAdministrationSystemToolStripMenuItem";
+            this.pedagogicalAdministrationSystemToolStripMenuItem.Size = new System.Drawing.Size(262, 22);
+            this.pedagogicalAdministrationSystemToolStripMenuItem.Text = "Pedagogical Administration System";
+            this.pedagogicalAdministrationSystemToolStripMenuItem.Click += new System.EventHandler(this.pedagogicalAdministrationSystemToolStripMenuItem_Click);
             // 
             // frm_MainMDI
             // 
@@ -150,5 +159,6 @@ namespace Interface
         private System.Windows.Forms.ToolStripMenuItem verticalToolStripMenuItem;
         private System.Windows.Forms.TabControl tbc_Terminal;
         private System.Windows.Forms.ToolStripMenuItem closeFormToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pedagogicalAdministrationSystemToolStripMenuItem;
     }
 }

@@ -51,6 +51,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frm_ATM_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm_ATM_UC.Designer.cs">
+      <DependentUpon>frm_ATM_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_AuthenticationBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_AuthenticationBox.Designer.cs">
+      <DependentUpon>frm_AuthenticationBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ExceptionBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ExceptionBox.Designer.cs">
+      <DependentUpon>frm_ExceptionBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_MainMDI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,12 +81,6 @@
     <Compile Include="frm_PedagogicalAdministrationSystem_UC.Designer.cs">
       <DependentUpon>frm_PedagogicalAdministrationSystem_UC.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_StudentRegistration.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frm_StudentRegistration.Designer.cs">
-      <DependentUpon>frm_StudentRegistration.cs</DependentUpon>
-    </Compile>
     <Compile Include="frm_StudentRegistration_UC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -78,14 +90,20 @@
     <Compile Include="Helpers\FixMaskFormatHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frm_ATM_UC.resx">
+      <DependentUpon>frm_ATM_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_AuthenticationBox.resx">
+      <DependentUpon>frm_AuthenticationBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ExceptionBox.resx">
+      <DependentUpon>frm_ExceptionBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_MainMDI.resx">
       <DependentUpon>frm_MainMDI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_PedagogicalAdministrationSystem_UC.resx">
       <DependentUpon>frm_PedagogicalAdministrationSystem_UC.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frm_StudentRegistration.resx">
-      <DependentUpon>frm_StudentRegistration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_StudentRegistration_UC.resx">
       <DependentUpon>frm_StudentRegistration_UC.cs</DependentUpon>
