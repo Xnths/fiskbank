@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FiskBank.Modules.Exceptions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,9 @@ namespace FiskBank.Modules.Staff
 
         }
 
-        public List<string> ToSeeReports()
+        public List<string> ToSeeReports(string passwordAttempt)
         {
-            //Athentication method
+            if (!ToAuthenticate(passwordAttempt)) throw new IncorrectPasswordException();
             return schoolReport;
         }
 
