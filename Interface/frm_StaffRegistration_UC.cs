@@ -16,5 +16,15 @@ namespace Interface
         {
             InitializeComponent();
         }
+
+        private void btn_ChooseFile_Click(object sender, EventArgs e)
+        {
+            var chooseFile = new OpenFileDialog();
+            var profilePicture = pic_ProfilePicture;
+
+            var fileName = chooseFile.FileName;
+
+            profilePicture.Image = Image.FromFile(fileName);
+        }
     }
 }

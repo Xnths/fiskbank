@@ -116,6 +116,7 @@ namespace Interface
             this.btn_ChooseFile.TabIndex = 9;
             this.btn_ChooseFile.Text = "button2";
             this.btn_ChooseFile.UseVisualStyleBackColor = true;
+            this.btn_ChooseFile.Click += new System.EventHandler(this.btn_ChooseFile_Click);
             // 
             // frm_StaffRegistration_UC
             // 

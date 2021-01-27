@@ -81,6 +81,12 @@
     <Compile Include="frm_PedagogicalAdministrationSystem_UC.Designer.cs">
       <DependentUpon>frm_PedagogicalAdministrationSystem_UC.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_StaffRegistration_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm_StaffRegistration_UC.Designer.cs">
+      <DependentUpon>frm_StaffRegistration_UC.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_StudentRegistration_UC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -104,6 +110,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_PedagogicalAdministrationSystem_UC.resx">
       <DependentUpon>frm_PedagogicalAdministrationSystem_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_StaffRegistration_UC.resx">
+      <DependentUpon>frm_StaffRegistration_UC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_StudentRegistration_UC.resx">
       <DependentUpon>frm_StudentRegistration_UC.cs</DependentUpon>
