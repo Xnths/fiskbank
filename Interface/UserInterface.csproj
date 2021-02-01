@@ -63,6 +63,12 @@
     <Compile Include="frm_AuthenticationBox.Designer.cs">
       <DependentUpon>frm_AuthenticationBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_ConfirmationBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ConfirmationBox.Designer.cs">
+      <DependentUpon>frm_ConfirmationBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_ExceptionBox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +107,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_AuthenticationBox.resx">
       <DependentUpon>frm_AuthenticationBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ConfirmationBox.resx">
+      <DependentUpon>frm_ConfirmationBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_ExceptionBox.resx">
       <DependentUpon>frm_ExceptionBox.cs</DependentUpon>

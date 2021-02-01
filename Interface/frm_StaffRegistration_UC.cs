@@ -35,7 +35,19 @@ namespace Interface
 
         private void btn_Submit_Click(object sender, EventArgs e)
         {
-            //confirmation dialog box request
+            var db = new frm_ConfirmationBox(
+                "Are you sure about the information?",
+                $"Name : {txt_Name.Text}",
+                $"Id: {txt_Id.Text}",
+                pic_ProfilePicture.Image);
+            if(db.ShowDialog() == DialogResult.Yes)
+            {
+                var mb = MessageBox.Show(
+                    "Successfully registred",
+                    "Registred",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+            }
         }
     }
 }
