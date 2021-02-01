@@ -13,8 +13,9 @@ namespace Interface
 {
     public partial class frm_MainMDI : Form
     {
-        static int iSR = 1;
+        static int iStudentR = 1;
         static int iPAS = 1;
+        static int iStaffR = 1;
         public frm_MainMDI()
         {
             InitializeComponent();
@@ -26,18 +27,18 @@ namespace Interface
             var tb = new TabPage();
 
             tb.Name = "Student Registration";
-            if(iSR == 1)
+            if(iStudentR == 1)
             {
                 tb.Text = "Student Registration";
             }
             else
             {
-                tb.Text = $"Student Registration {iSR}";
+                tb.Text = $"Student Registration {iStudentR}";
             }
             tb.Controls.Add(f);
 
             tbc_Terminal.TabPages.Add(tb);
-            iSR++;
+            iStudentR++;
         }
 
         private void cascadeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -80,6 +81,25 @@ namespace Interface
 
             tbc_Terminal.TabPages.Add(tb);
             iPAS++;
+        }
+
+        private void staffRegistrationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var f = new frm_StaffRegistration_UC();
+            var tb = new TabPage();
+            tb.Name = "Staff Registration";
+            if (iStaffR == 1)
+            {
+                tb.Text = "Staff Registration";
+            }
+            else
+            {
+                tb.Text = $"Staff Registration {iStaffR}";
+            }
+            tb.Controls.Add(f);
+
+            tbc_Terminal.TabPages.Add(tb);
+            iStaffR++;
         }
     }
 }

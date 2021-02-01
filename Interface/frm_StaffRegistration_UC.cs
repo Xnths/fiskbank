@@ -19,12 +19,23 @@ namespace Interface
 
         private void btn_ChooseFile_Click(object sender, EventArgs e)
         {
-            var chooseFile = new OpenFileDialog();
-            var profilePicture = pic_ProfilePicture;
+            var open = new OpenFileDialog();
+            open.Filter = "Image Files (*.jpg; *.jpeg; *.png) |*.jpg; *.jpeg; *.png";
+            if(open.ShowDialog() == DialogResult.OK)
+            {
+                pic_ProfilePicture.Image = Image.FromFile(open.FileName);
+            }
 
-            var fileName = chooseFile.FileName;
+        }
 
-            profilePicture.Image = Image.FromFile(fileName);
+        private void txt_Name_TextChanged(object sender, EventArgs e)
+        {
+            lbl_StaffRegistration.Text = $"{txt_Name.Text}'s Registration";
+        }
+
+        private void btn_Submit_Click(object sender, EventArgs e)
+        {
+            //confirmation dialog box request
         }
     }
 }

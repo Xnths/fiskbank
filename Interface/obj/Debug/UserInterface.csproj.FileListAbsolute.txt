@@ -16,3 +16,4 @@ C:\Users\Vaio\Desktop\Studies\C#\FiskBank\Interface\obj\Debug\Interface.frm_Stud
 C:\Users\Vaio\Desktop\Studies\C#\FiskBank\Interface\obj\Debug\Interface.frm_ATM_UC.resources
 C:\Users\Vaio\Desktop\Studies\C#\FiskBank\Interface\obj\Debug\Interface.frm_AuthenticationBox.resources
 C:\Users\Vaio\Desktop\Studies\C#\FiskBank\Interface\obj\Debug\Interface.frm_ExceptionBox.resources
+C:\Users\Vaio\Desktop\Studies\C#\FiskBank\Interface\obj\Debug\Interface.frm_StaffRegistration_UC.resources

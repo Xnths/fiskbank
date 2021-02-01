@@ -32,13 +32,14 @@ namespace Interface
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.formToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.studentRegistryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pedagogicalAdministrationSystemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.windowsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cascadeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.horizontalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verticalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closeFormToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tbc_Terminal = new System.Windows.Forms.TabControl();
-            this.pedagogicalAdministrationSystemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.staffRegistrationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,6 +59,7 @@ namespace Interface
             // 
             this.formToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.studentRegistryToolStripMenuItem,
+            this.staffRegistrationToolStripMenuItem,
             this.pedagogicalAdministrationSystemToolStripMenuItem});
             this.formToolStripMenuItem.Name = "formToolStripMenuItem";
             this.formToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
@@ -66,9 +68,16 @@ namespace Interface
             // studentRegistryToolStripMenuItem
             // 
             this.studentRegistryToolStripMenuItem.Name = "studentRegistryToolStripMenuItem";
-            this.studentRegistryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.studentRegistryToolStripMenuItem.Size = new System.Drawing.Size(262, 22);
             this.studentRegistryToolStripMenuItem.Text = "Student Registry";
             this.studentRegistryToolStripMenuItem.Click += new System.EventHandler(this.studentRegistryToolStripMenuItem_Click);
+            // 
+            // pedagogicalAdministrationSystemToolStripMenuItem
+            // 
+            this.pedagogicalAdministrationSystemToolStripMenuItem.Name = "pedagogicalAdministrationSystemToolStripMenuItem";
+            this.pedagogicalAdministrationSystemToolStripMenuItem.Size = new System.Drawing.Size(262, 22);
+            this.pedagogicalAdministrationSystemToolStripMenuItem.Text = "Pedagogical Administration System";
+            this.pedagogicalAdministrationSystemToolStripMenuItem.Click += new System.EventHandler(this.pedagogicalAdministrationSystemToolStripMenuItem_Click);
             // 
             // windowsToolStripMenuItem
             // 
@@ -123,12 +132,12 @@ namespace Interface
             this.tbc_Terminal.Size = new System.Drawing.Size(1264, 658);
             this.tbc_Terminal.TabIndex = 3;
             // 
-            // pedagogicalAdministrationSystemToolStripMenuItem
+            // staffRegistrationToolStripMenuItem
             // 
-            this.pedagogicalAdministrationSystemToolStripMenuItem.Name = "pedagogicalAdministrationSystemToolStripMenuItem";
-            this.pedagogicalAdministrationSystemToolStripMenuItem.Size = new System.Drawing.Size(262, 22);
-            this.pedagogicalAdministrationSystemToolStripMenuItem.Text = "Pedagogical Administration System";
-            this.pedagogicalAdministrationSystemToolStripMenuItem.Click += new System.EventHandler(this.pedagogicalAdministrationSystemToolStripMenuItem_Click);
+            this.staffRegistrationToolStripMenuItem.Name = "staffRegistrationToolStripMenuItem";
+            this.staffRegistrationToolStripMenuItem.Size = new System.Drawing.Size(262, 22);
+            this.staffRegistrationToolStripMenuItem.Text = "Staff Registration";
+            this.staffRegistrationToolStripMenuItem.Click += new System.EventHandler(this.staffRegistrationToolStripMenuItem_Click);
             // 
             // frm_MainMDI
             // 
@@ -160,5 +169,6 @@ namespace Interface
         private System.Windows.Forms.TabControl tbc_Terminal;
         private System.Windows.Forms.ToolStripMenuItem closeFormToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pedagogicalAdministrationSystemToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem staffRegistrationToolStripMenuItem;
     }
 }
